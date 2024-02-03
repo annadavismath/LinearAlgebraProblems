@@ -1,0 +1,129 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+
+\title{Essential Vocabulary} \license{CC BY-NC-SA 4.0}
+
+
+
+\begin{document}
+\begin{abstract}
+\end{abstract}
+\maketitle
+
+
+\begin{onlineOnly}
+\section*{Essential Vocabulary}
+\end{onlineOnly}
+
+Linear equation
+\begin{expandable}
+    A \dfn{linear equation} in variables $x_1, \ldots, x_n$ is an equation that can be written in the form
+$$a_1x_1+a_2x_2+\ldots +a_nx_n=b$$
+where $a_1,\ldots ,a_n$ and $b$ are constants.
+\end{expandable}
+
+\href{https://ximera.osu.edu/oerlinalg/LinearAlgebra/SYS-0010/main}{System of linear equations}
+
+Consistent system
+\begin{expandable}
+    A system of equations that has a solution.
+\end{expandable}
+
+Inconsistent system
+\begin{expandable}
+    A system of equations that has no solution.
+\end{expandable}
+
+Equivalent linear systems (\ref{def:equivsystems})
+\begin{expandable}
+    Two systems of linear equations are said to be equivalent if they have the same solution set.
+\end{expandable}
+
+Elementary row operations
+\begin{expandable}
+    The following three operations performed on a linear system are called \dfn{elementary row operations}.
+\begin{enumerate}
+\item Switching the order of equations (rows) $i$ and $j$:
+$$R_i\leftrightarrow R_j$$
+\item Multiplying both sides of equation (row) $i$ by the same non-zero constant, $k$, and replacing equation $i$ with the result:
+$$kR_i\rightarrow R_i$$
+\item Adding $k$ times equation (row) $i$ to equation (row) $j$, and replacing equation $j$ with the result:
+$$R_j+kR_i\rightarrow R_j$$
+\end{enumerate}
+\end{expandable}
+
+Augmented matrix/Coefficient matrix
+\begin{expandable}
+    Every linear system 
+$$\begin{array}{ccccccccc}
+      a_{11}x_1 &+ &a_{12}x_2&+&\ldots&+&a_{1n}x_n&= &b_1 \\
+	 a_{21}x_1 &+ &a_{22}x_2&+&\ldots&+&a_{2n}x_n&= &b_2 \\
+     &&&&\vdots&&&& \\
+     a_{m1}x_1 &+ &a_{m2}x_2&+&\ldots&+&a_{mn}x_n&= &b_m
+    \end{array}$$
+    can be written in the \dfn{augmented matrix form} as follows:
+    $$\left[\begin{array}{cccc|c}  
+ a_{11}&a_{12}&\ldots&a_{1n}&b_1\\a_{21}&a_{22}&\ldots&a_{2n}&b_2\\\vdots&\vdots&\ddots&\vdots&\vdots\\a_{m1}&a_{m2}&\ldots&a_{mn}&b_m
+ \end{array}\right]$$
+ The array to the left of the vertical bar is called the \dfn{coefficient matrix} of the linear system and is often given a capital letter name, like $A$.  The vertical array to the right of the bar is called a \dfn{constant vector}.
+ $$A=\begin{bmatrix}a_{11}&a_{12}&\ldots&a_{1n}\\a_{21}&a_{22}&\ldots&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}&a_{m2}&\ldots&a_{mn}\end{bmatrix}\quad\text{and}\quad\vec{b}=\begin{bmatrix}b_1\\b_2\\\vdots\\b_m\end{bmatrix}$$
+We will sometimes use the following notation to represent an augmented matrix.
+
+$$\left[\begin{array}{c|c}  
+ A & \vec{b}\\
+ \end{array}\right]$$
+\end{expandable}
+
+\href{https://ximera.osu.edu/oerlinalg/LinearAlgebra/SYS-0020/main}{Row equivalent matrices}
+
+Row echelon form
+\begin{expandable}
+    A matrix is said to be in \dfn{row-echelon form} if:
+\begin{enumerate}
+\item All entries below each leading entry are 0.
+\item Each leading entry is in a column to the right of the leading entries in the rows above it.
+\item All rows of zeros, if there are any, are located below non-zero rows.
+\end{enumerate}
+\end{expandable}
+
+Reduced row echelon form
+\begin{expandable}
+    A matrix that is already in \dfn{row-echelon} form is said to be in \dfn{reduced row-echelon form} if:
+\begin{enumerate}
+\item Each leading entry is $1$
+\item All entries {\it above} and below each leading $1$ are $0$
+\end{enumerate}
+\end{expandable}
+
+Gaussian elimination (\ref{def:GaussianElimination})
+\begin{expandable}
+    The process of using the elementary row operations on a matrix to transform it into row-echelon form is called \dfn{Gaussian Elimination}.
+\end{expandable}
+
+Gauss-Jordan elimination (\ref{def:GaussJordanElimination})
+\begin{expandable}
+    The process of using the elementary row operations on a matrix to transform it into reduced row-echelon form is called \dfn{Gauss-Jordan elimination}.
+\end{expandable}
+
+Leading entry (leading 1)
+\begin{expandable}
+    The first non-zero entry in a row of a matrix (when read from left to right) is called the \dfn{leading entry}.  When the leading entry is 1, we refer to it as a \dfn{leading 1}.
+\end{expandable}
+
+\href{https://ximera.osu.edu/oerlinalg/LinearAlgebra/SYS-0020/main}{Leading variable}
+
+\href{https://ximera.osu.edu/oerlinalg/LinearAlgebra/SYS-0020/main}{Free variable}
+
+Rank of a matrix
+\begin{expandable}
+    The \dfn{rank} of matrix $A$, denoted by $\mbox{rank}(A)$, is the number of nonzero rows that remain after we reduce $A$ to row-echelon form by elementary row operations.
+\end{expandable}
+
+
+
+
+
+
+
+
+\end{document}
